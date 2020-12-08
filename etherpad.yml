@@ -10,6 +10,8 @@ services:
             - DEFAULT_PAD_TEXT="${ETHERPAD_DEFAULT_PAD_TEXT}"
             - SKIN_NAME="${ETHERPAD_SKIN_NAME}"
             - SKIN_VARIANTS="${ETHERPAD_SKIN_VARIANTS}"
+        volumes:
+            - ${CONFIG}/etherpad/:/opt/etherpad-lite/var:Z
         networks:
             meet.jitsi:
                 aliases:
